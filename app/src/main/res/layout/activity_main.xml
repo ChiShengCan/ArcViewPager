@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <FrameLayout
+        android:id="@+id/fl"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_230">
+        <com.youth.banner.Banner
+            android:id="@+id/banner"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_230"
+            app:indicator_drawable_selected="@drawable/indicator_drawable_selected"
+            app:indicator_drawable_unselected="@drawable/indicator_drawable_unselected"
+            app:indicator_height="@dimen/dp_8"
+            app:indicator_width="@dimen/dp_8"
+            ></com.youth.banner.Banner>
+
+        <LinearLayout
+            android:layout_marginBottom="@dimen/dp_40"
+            android:layout_gravity="bottom"
+            android:background="@drawable/shape_chapter"
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:textColor="#fff"
+                android:padding="@dimen/dp_5"
+                android:text="续看:海贼王 第1话"
+                android:textSize="@dimen/sp_10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <ImageView
+                android:layout_marginRight="@dimen/dp_10"
+                android:id="@+id/iv_recent"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/home_icon_close"
+                android:layout_width="@dimen/dp_13"
+                android:layout_height="@dimen/dp_13" />
+
+        </LinearLayout>
+
+    </FrameLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_below="@id/fl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:id="@+id/ll_category0"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/dp_50"
+                android:layout_gravity="center_horizontal"
+                android:src="@drawable/home_icon_rank"
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/ll_category1"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/dp_50"
+            android:orientation="vertical"
+            >
+            <ImageView
+                android:src="@drawable/home_icon_category"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/ll_category2"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/dp_50"
+            android:orientation="vertical"
+            >
+            <ImageView
+                android:src="@drawable/home_icon_new"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                />
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+
+</RelativeLayout>
